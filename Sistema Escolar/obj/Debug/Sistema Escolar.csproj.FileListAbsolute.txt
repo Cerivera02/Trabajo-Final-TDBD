@@ -1,0 +1,11 @@
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\bin\Debug\Sistema Escolar.exe.config
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\bin\Debug\Sistema Escolar.exe
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\bin\Debug\Sistema Escolar.pdb
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.AssemblyReference.cache
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.SuggestedBindingRedirects.cache
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema_Escolar.Properties.Resources.resources
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.GenerateResource.cache
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.CoreCompileInputs.cache
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.exe
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.pdb
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema_Escolar.InicioSesion.resources
