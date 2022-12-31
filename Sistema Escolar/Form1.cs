@@ -18,7 +18,7 @@ namespace Sistema_Escolar
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=CARLOSEDUARDO\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True");
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
