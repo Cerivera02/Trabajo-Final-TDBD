@@ -91,5 +91,55 @@ namespace Sistema_Escolar
 
 
         }
+
+        private void btnAgregarMaestros_Click(object sender, EventArgs e)
+        {
+            String username, password, tipoUser;
+
+            username = txtBoxUsername.Text;
+            password = txtBoxPassword.Text;
+
+            if (comboBoxTipoUser.Text == "")
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "INSERT INTO MAESTRO (username, password) VALUES (@username, @password)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+                        
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+            }
+            else
+            {
+                tipoUser = comboBoxTipoUser.Text;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "INSERT INTO MAESTRO (username, password, tipoUser) VALUES (@username, @password, @tipoUser)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+                        command.Parameters.AddWithValue("@password", password);
+                        command.Parameters.AddWithValue("@tipoUser", tipoUser);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+               
+            }
+            txtBoxUsername.Clear();
+            txtBoxPassword.Clear();
+        }
     }
 }

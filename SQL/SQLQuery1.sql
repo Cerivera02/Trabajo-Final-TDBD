@@ -6,7 +6,7 @@ CREATE TABLE MAESTRO (
 	id_user int NOT NULL PRIMARY KEY IDENTITY (1,1),
 	username varchar(50) NOT NULL,
 	password varchar(50) NOT NULL,
-	tipoUser varchar(50) NOT NULL
+	tipoUser varchar(50) NOT NULL DEFAULT 'Maestro'
 )
 
 CREATE TABLE MAESTRO_RES (
@@ -38,7 +38,7 @@ CREATE TABLE ALUMNO_RES (
 )
 
 -- CREACION DE LOS DISTINTOS TRIGGER UTILIZADOS
-CREATE TRIGGER bitacora_usuarios
+CREATE TRIGGER bitacora_RegistroMaestros
 ON MAESTRO
 after INSERT
 AS
@@ -69,3 +69,4 @@ select * FROM ALUMNO
 select * FROM ALUMNO_RES
 select * FROM MAESTRO
 select * FROM MAESTRO_RES
+
