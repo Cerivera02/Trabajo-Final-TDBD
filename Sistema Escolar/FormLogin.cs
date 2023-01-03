@@ -19,17 +19,17 @@ namespace Sistema_Escolar
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True");
-
+        
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            String username, password;
+            String username, password,tipoUser;
 
             username = txtBox_User.Text;
             password = txtBox_Password.Text;
 
             try
             {
-                String query = "SELECT * FROM USUARIO WHERE username = '" + username + "' AND password = '" + password + "' ";
+                String query = "SELECT * FROM MAESTRO WHERE username = '" + username + "' AND password = '" + password + "' ";
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);
 
                 DataTable dt = new DataTable();
@@ -41,7 +41,40 @@ namespace Sistema_Escolar
                     password = txtBox_Password.Text;
 
                     MessageBox.Show("Sesion Iniciada");
+                                        
+                    conn.Open();
 
+                    query = "SELECT tipoUser FROM MAESTRO WHERE username = @username";
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@username", username);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            // Crea una tipoUser para guardar el valor del campo
+
+                            if (reader.Read())
+                            {
+                                // Asigna el valor del campo a la tipoUser
+                                tipoUser = reader["tipoUser"].ToString();
+
+                                switch (tipoUser)
+                                {
+                                    case "Administrador":
+                                        Form FormAdministrador = new FormAdministrador();
+                                        FormAdministrador.Show();
+                                        Console.WriteLine("Form iniciado de Administrador");
+                                        break;
+
+                                    case "Maestro":
+                                        Form FormMaestro = new FormMaestro();
+                                        FormMaestro.Show();
+                                        Console.WriteLine("Form iniciado de Maestro");
+                                        break;
+                                }
+                            }
+                        }
+                    }
                 }
                 else
                 {

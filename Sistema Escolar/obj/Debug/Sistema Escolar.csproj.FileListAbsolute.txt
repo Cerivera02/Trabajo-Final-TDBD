@@ -9,3 +9,5 @@ C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.C
 C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.exe
 C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.pdb
 C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema_Escolar.InicioSesion.resources
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema_Escolar.FormAdministrador.resources
+C:\Proyectos\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema_Escolar.FormMaestro.resources
