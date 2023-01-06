@@ -21,6 +21,7 @@ namespace Sistema_Escolar
         }
 
         String connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True";
+        SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True");
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
@@ -140,6 +141,21 @@ namespace Sistema_Escolar
             }
             txtBoxUsername.Clear();
             txtBoxPassword.Clear();
+        }
+
+        private void FormAdministrador_Load(object sender, EventArgs e)
+        {
+            String consulta = "SELECT nombre as 'Nombre' FROM ALUMNO";
+            SqlDataAdapter sda = new SqlDataAdapter(consulta,conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridAlumnos.DataSource = dt;
+
+            consulta = "SELECT nombre as 'Nombre' FROM MAESTRO";
+            sda = new SqlDataAdapter(consulta, conn);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dataGridMaestros.DataSource = dt;
         }
     }
 }
