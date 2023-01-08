@@ -86,8 +86,6 @@ INSERT INTO ALUMNO (nombre, apellidoPaterno, apellidoMaterno, telefono, curp, id
 
 -- CAMBIOS
 UPDATE ALUMNO  set id_beca=null where noControl= 1
-select * from ALUMNO where noControl=1
-
 UPDATE BECADOS set monto=18000 where nombreBeca='Esposos Rodriguez'
 UPDATE CARRERA set nombreCarrera='Administracion de Empresas' WHERE id_carrera=1
 
@@ -192,6 +190,56 @@ END
 EXEC WSP_CURP @CURP =  'RONM020124HSRB54'
 EXEC BAJA_ALUMNO '9'
 EXEC INSERTAR_ALUMNO 'Paola', 'Ruiz', 'Cordova', '0000001220', 'JNORQ121098230', 1;
+
+--FUNCIONES
+CREATE FUNCTION fn_obtener_telefono (
+    @noControl INT
+)
+RETURNS VARCHAR(20)
+AS
+BEGIN
+    DECLARE @telefono VARCHAR(20)
+
+    SELECT @telefono = Telefono
+    FROM Alumno
+    WHERE noControl = @noControl
+
+    RETURN @telefono
+END
+
+CREATE FUNCTION fn_obtener_num_alumnos_por_carrera (
+    @idCarrera INT
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @numAlumnos INT
+
+    SELECT @numAlumnos = COUNT(*)
+    FROM Alumno
+    WHERE id_carrera = @idCarrera
+
+    RETURN @numAlumnos
+END
+
+CREATE FUNCTION fn_obtener_nombre_maestro (
+    @username VARCHAR(50)
+)
+RETURNS VARCHAR(50)
+AS
+BEGIN
+    DECLARE @nombre VARCHAR(50)
+
+    SELECT @nombre = Nombre
+    FROM MAESTRO
+    WHERE username = @username
+
+    RETURN @nombre
+END
+
+select dbo.fn_obtener_telefono(1)
+select dbo.fn_obtener_num_alumnos_por_carrera(2)
+SELECT dbo.fn_obtener_nombre_maestro('admin')
 
 SELECT name FROM sys.procedures
 SELECT name FROM sys.triggers

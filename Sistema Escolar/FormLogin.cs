@@ -19,10 +19,10 @@ namespace Sistema_Escolar
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TRABAJOFINAL;Integrated Security=True");
-        
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            String username, password,tipoUser;
+            String username, password, tipoUser;
 
             username = txtBox_User.Text;
             password = txtBox_Password.Text;
@@ -54,11 +54,11 @@ namespace Sistema_Escolar
                             if (reader.Read())
                             {
                                 tipoUser = reader["tipoUser"].ToString();
-
+                                
                                 switch (tipoUser)
                                 {
                                     case "Administrador":
-                                        Form FormAdministrador = new FormAdministrador();
+                                        Form FormAdministrador = new FormAdministrador(username);
                                         FormAdministrador.Show();
                                         Console.WriteLine("Form iniciado de Administrador");
                                         break;
