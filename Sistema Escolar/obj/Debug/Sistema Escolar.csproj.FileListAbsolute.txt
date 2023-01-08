@@ -24,3 +24,16 @@ C:\Users\Mariana Maytorena\Desktop\Trabajo Final BD\Sistema Escolar\obj\Debug\Si
 C:\Users\Mariana Maytorena\Desktop\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.CoreCompileInputs.cache
 C:\Users\Mariana Maytorena\Desktop\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.exe
 C:\Users\Mariana Maytorena\Desktop\Trabajo Final BD\Sistema Escolar\obj\Debug\Sistema Escolar.pdb
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\bin\Debug\Sistema Escolar.exe.config
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\bin\Debug\Sistema Escolar.exe
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\bin\Debug\Sistema Escolar.pdb
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.AssemblyReference.cache
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.SuggestedBindingRedirects.cache
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema_Escolar.InicioSesion.resources
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema_Escolar.FormAdministrador.resources
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema_Escolar.FormMaestro.resources
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema_Escolar.Properties.Resources.resources
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.GenerateResource.cache
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.csproj.CoreCompileInputs.cache
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.exe
+C:\Proyectos\Trabajo-Final-TDBD\Sistema Escolar\obj\Debug\Sistema Escolar.pdb

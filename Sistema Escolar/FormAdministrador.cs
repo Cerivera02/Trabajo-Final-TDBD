@@ -184,5 +184,53 @@ namespace Sistema_Escolar
 
             //UPDATE
         }
+
+        private void Eliminar_Btn_Click(object sender, EventArgs e)
+        {
+            String noControl;
+
+            noControl = noControl_Tbx.Text;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "EXEC BAJA_ALUMNO @WCONTROL";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@WCONTROL", noControl);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+            MessageBox.Show("Alumno eliminado exitosamente");
+
+        }
+
+        private void Editar_Btn_Click(object sender, EventArgs e)
+        {
+            String noControl;
+
+            noControl = NoControlParaEditar_Tbx.Text;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string consulta = "UPDATE ALUMNO SET " + Editar_datos_Cbx.Text + " = '" + nuevoValor_Tbx.Text + "' WHERE noControl = '" + NoControlParaEditar_Tbx.Text + "'";
+                SqlCommand comando = new SqlCommand(consulta, connection);
+                int cant;
+                cant = comando.ExecuteNonQuery();
+                if (cant > 0)
+                {
+                    MessageBox.Show("Dato modificado exitosamente");
+
+                }
+                connection.Close();
+
+            }
+        }
     }
 }
+
