@@ -51,11 +51,8 @@ namespace Sistema_Escolar
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            // Crea una tipoUser para guardar el valor del campo
-
                             if (reader.Read())
                             {
-                                // Asigna el valor del campo a la tipoUser
                                 tipoUser = reader["tipoUser"].ToString();
 
                                 switch (tipoUser)

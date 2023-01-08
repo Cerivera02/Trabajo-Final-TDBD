@@ -145,17 +145,44 @@ namespace Sistema_Escolar
 
         private void FormAdministrador_Load(object sender, EventArgs e)
         {
+            //CONSUTAS 
             String consulta = "SELECT nombre as 'Nombre' FROM ALUMNO";
             SqlDataAdapter sda = new SqlDataAdapter(consulta,conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridAlumnos.DataSource = dt;
 
-            consulta = "SELECT nombre as 'Nombre' FROM MAESTRO";
+            consulta = "SELECT nombre, id_carrera FROM ALUMNO";
             sda = new SqlDataAdapter(consulta, conn);
             dt = new DataTable();
             sda.Fill(dt);
             dataGridMaestros.DataSource = dt;
+
+            //JOIN
+            consulta = "SELECT * FROM ALUMNO AS A LEFT JOIN BECADOS AS B ON A.id_beca=B.id_beca";
+      
+            sda.Fill(dt);
+            dgv2.DataSource = dt;
+
+            consulta = "SELECT * FROM ALUMNO AS A LEFT JOIN BECADOS AS B ON A.id_beca=B.id_beca";
+            sda = new SqlDataAdapter(consulta, conn);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dgv2.DataSource = dt;
+
+            //VISTAS
+            consulta = "SELECT * FROM VISTA2";
+
+            sda.Fill(dt);
+            dgv3.DataSource = dt;
+
+            consulta = "SELECT * FROM VISTA2";
+            sda = new SqlDataAdapter(consulta, conn);
+            dt = new DataTable();
+            sda.Fill(dt);
+            dgv3.DataSource = dt;
+
+            //UPDATE
         }
     }
 }
