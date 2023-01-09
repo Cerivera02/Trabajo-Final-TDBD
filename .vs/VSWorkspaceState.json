@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sistema Escolar",
-    "\\SQL"
+    "\\Sistema Escolar"
   ],
-  "SelectedNode": "\\Sistema Escolar\\FormAdministrador.cs",
+  "SelectedNode": "\\Sistema Escolar\\FormLogin.cs",
   "PreviewInSolutionExplorer": false
 }

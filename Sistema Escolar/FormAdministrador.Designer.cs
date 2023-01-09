@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrador));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageAlumnos = new System.Windows.Forms.TabPage();
             this.txtBoxCarrera = new System.Windows.Forms.TextBox();
@@ -417,7 +418,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(780, 494);
+            this.tabPage3.Size = new System.Drawing.Size(780, 406);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Visualizar";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -706,9 +707,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tabControl2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAdministrador";
-            this.Text = "Form2";
+            this.Text = "Menu Principal | Direccion";
             this.Load += new System.EventHandler(this.FormAdministrador_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageAlumnos.ResumeLayout(false);

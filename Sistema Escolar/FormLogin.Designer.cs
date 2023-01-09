@@ -132,8 +132,9 @@
             this.Controls.Add(this.txtBox_User);
             this.Controls.Add(this.lbl_Bienvenida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InicioSesion";
-            this.Text = "Form1";
+            this.Text = "Inicio Sesion | Escuela";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
